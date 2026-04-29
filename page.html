@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的浏览器起始页</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--视频背景-->
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="bg.mp4" type="video/mp4" />
+    </video>
+    <div class="main-container">
+      <!--名言-->
+      <div class="quote-box">
+        Your time is limited, so don't waste it living someone else's life.<br />
+        Stay hungry, stay foolish. -- Steve Jobs
+      </div>
+
+      <!--天气-->
+      <div class="weather-box">
+        <span id="weather-icon" class="weather-icon"></span>
+        <span id="weather-temp" class="weather-temp">--°</span>
+        <span id="weather-location" class="weather-location">陇南·成县</span>
+      </div>
+
+      <!--时钟区域-->
+      <div class="clock-container">
+        <!--数码时钟-->
+        <div id="digital-clock" class="digital-clock">--:--:--</div>
+        <!--模拟时钟 (Pixel风格)-->
+        <div id="analog-clock" class="analog-clock">
+          <canvas id="clock-canvas" width="270" height="270"></canvas>
+        </div>
+      </div>
+
+      <!--切换按钮-->
+      <button id="toggle-clock" class="toggle-btn" title="切换时钟样式">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 3"/>
+        </svg>
+      </button>
+
+      <!--搜索框-->
+      <div class="search-area">
+        <input type="text" id="search-input" placeholder="搜索..." />
+        <button id="search-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+
+      <!--快捷链接-->
+      <div class="links-area">
+        <a href="https://grok.com/" class="link-item">Grok</a>
+        <a href="https://chat.deepseek.com/" class="link-item">DeepSeek</a>
+        <a href="https://www.runoob.com/" class="link-item">菜鸟教程</a>
+        <a href="https://developer.mozilla.org" class="link-item">MDN Web Docs</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
